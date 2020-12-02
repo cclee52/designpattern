@@ -53,3 +53,12 @@ class Friend(Contact):
     def __init__(self, name, email, phone):
         super().__init__(name, email)
         self.phone = phone
+
+
+class MailSender:
+    def send_mail(self, message):
+        print("Sending mail to " + self.email)
+        # Add e-mail logic here
+# MULTIPLE INHERITANCE
+class EmailableContact(Contact, MailSender):
+    pass
